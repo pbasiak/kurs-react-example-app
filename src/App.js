@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
 
-function Heading(props) {
-  return (
-    <h1>
-      {props.title}
-    </h1>
-  );
-}
+import {Heading} from './components/Heading/Heading';
+
+import './App.css';
 
 class App extends Component {
   render() {
