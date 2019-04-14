@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Heading title="React App"/>
+        <Heading title="React App" variant="secondary"/>
       </div>
     );
   }

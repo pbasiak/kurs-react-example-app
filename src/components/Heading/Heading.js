@@ -1,11 +1,10 @@
 import React from 'react';
-
-import './Heading.scss';
+import {LargePageHeading} from './styled/PageHeading';
 
 export function Heading(props) {
     return (
-        <h1 className="page-heading">
+        <LargePageHeading variant={props.variant}>
             {props.title}
-        </h1>
+        </LargePageHeading>
     );
 }
