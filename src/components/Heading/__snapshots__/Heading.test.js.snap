@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Heading /> should match snapshot 1`] = `<LargePageHeading />`;
+
+exports[`<Heading /> should match snapshot with passed props 1`] = `
+<LargePageHeading
+  variant="secondary"
+>
+  test title
+</LargePageHeading>
+`;
