@@ -1,34 +1,33 @@
 import React, { Component } from 'react';
 
-import {Heading} from './components/Heading/Heading';
-
 import './App.css';
-import Button from './components/Button/Button';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Navigation from './components/Navigation/Navigation';
+import Home from './components/pages/Home';
+import About from './components/pages/About';
 
 class App extends Component {
 
-  constructor() {
-    super();
-    this.state = {
-      isClicked: false,
-    };
-    this.onClick = this.onClick.bind(this);
-  }
-
-  onClick() {
-    this.setState(state => ({
-      isClicked: !state.isClicked,
-    }));
-  }
-
   render() {
     return (
-      <div className="App">
-        <Heading title="React App" variant="secondary"/>
-        <Button onClick={this.onClick}>
-          {this.state.isClicked ? 'Clicked! Click again to reset' : 'Click me!'}
-        </Button>
-      </div>
+      <Router>
+        <div className="App">
+          <Navigation />
+          <Switch>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
