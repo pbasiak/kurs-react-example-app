@@ -10,6 +10,7 @@ import {
 import Navigation from './components/Navigation/Navigation';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
+import NotFound from './components/pages/NotFound';
 
 class App extends Component {
 
@@ -22,8 +23,11 @@ class App extends Component {
             <Route path="/about">
               <About />
             </Route>
-            <Route path="/">
+            <Route exact path="/">
               <Home />
+            </Route>
+            <Route>
+              <NotFound />
             </Route>
           </Switch>
         </div>
