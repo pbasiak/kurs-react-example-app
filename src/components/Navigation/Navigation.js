@@ -10,6 +10,12 @@ export default function Navigation() {
             <li>
                 <Link to="/about">About</Link>
             </li>
+            <li>
+                <Link to="/product?name=awesome-book">Product > Awesome Book</Link>
+            </li>
+            <li>
+                <Link to="/product?name=react-course">Product > React Course</Link>
+            </li>
         </ul>
     );
 }

@@ -11,6 +11,7 @@ import Navigation from './components/Navigation/Navigation';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import NotFound from './components/pages/NotFound';
+import Product from './components/pages/Product';
 
 class App extends Component {
 
@@ -20,6 +21,9 @@ class App extends Component {
         <div className="App">
           <Navigation />
           <Switch>
+            <Route path="/product">
+              <Product />
+            </Route>
             <Route path="/about">
               <About />
             </Route>
